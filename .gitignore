@@ -1,0 +1,4 @@
+# OS/Editor
+*.sublime*
+.DS_Store
+Thumbs.db
