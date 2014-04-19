@@ -1,0 +1,36 @@
+@import "../vendor/bower/bourbon/app/assets/stylesheets/bourbon";
+@import "grid_settings";
+@import "../vendor/bower/neat/app/assets/stylesheets/neat";
+
+/**
+ * Mixins.
+ */
+@mixin hero-text() {
+  letter-spacing: em(-1);
+  font-weight: 300;
+}
+
+/**
+ * Outer elements.
+ */
+body {
+  background: #eee;
+  font-family: "Open Sans", $helvetica;
+}
+
+/**
+ * Frames.
+ */
+div.container {
+  @include outer-container;
+}
+
+section.row, header, footer {
+  @include span-columns(12);
+  background: #fff;
+
+  > div {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
